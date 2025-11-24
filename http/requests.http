@@ -1,0 +1,23 @@
+### New accepted comment
+POST http://localhost:8080/api/comments
+Content-Type: application/json
+
+{
+    "text"   : "The quick brown fox jumps over the lazy dog.",
+    "author" : "John Doe"
+}
+
+### New rejected comment
+POST http://localhost:8080/api/comments
+Content-Type: application/json
+
+{
+    "text"   : "Hatred and many swearing words",
+    "author" : "Jane Doe"
+}
+
+### Find comment by id
+GET http://localhost:8080/api/comments/019ab759-9351-716b-9df6-879255750341
+
+### Find all comments, paged
+GET http://localhost:8080/api/comments?page=0&size=56&sort=id,desc
